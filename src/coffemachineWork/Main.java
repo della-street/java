@@ -7,7 +7,7 @@ public class Main {
         Coffeemachine supermachine = new Coffeemachine();
 
 
-        System.out.println(supermachine.makeCoffee(0.5, 800));
+        System.out.println(supermachine.makeCoffee(0.5, 200));
 
         supermachine.addWater(900);
 
