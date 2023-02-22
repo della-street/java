@@ -35,14 +35,14 @@ public class Coffeemachine {
         }
     }
 
-    public String makeCoffee(double coffeeStrength, int cup) {
+    public String makeCoffee(CoffeeStrength coffeeStrength, int cup) {
         if (cup > currentAmountOfWater) {
             return "Долейте воды";
         }
-        else if (currentAmountOfCoffee < CONSUMPTION_STRONG_COFFEE * coffeeStrength) {
+        else if (currentAmountOfCoffee < CONSUMPTION_STRONG_COFFEE * coffeeStrength.getCoffeeStrength()) {
             return "Досыпьте кофе";
         } else currentAmountOfWater -= cup;
-        currentAmountOfCoffee -= CONSUMPTION_STRONG_COFFEE * coffeeStrength;
+        currentAmountOfCoffee -= CONSUMPTION_STRONG_COFFEE * coffeeStrength.getCoffeeStrength();
         return "Готовлю " + coffee.getCoffeeDescription() + " объемом " + cup + " крепость " + coffeeStrength;
     }
 }
