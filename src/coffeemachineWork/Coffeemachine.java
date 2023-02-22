@@ -1,6 +1,4 @@
-package coffemachineWork;
-
-import java.util.function.Consumer;
+package coffeemachineWork;
 
 public class Coffeemachine {
     private int currentAmountOfWater;
@@ -9,7 +7,6 @@ public class Coffeemachine {
     private final double MAX_AMOUNT_COFFEE = 500;
     private final double CONSUMPTION_STRONG_COFFEE = 40;
     private Coffee coffee;
-
 
     public String getCurrentAmountOfCoffee() {
         return "Кофе осталось " + currentAmountOfCoffee + " г";
@@ -26,7 +23,6 @@ public class Coffeemachine {
         } else {
             return "Емкость для воды заполнена";
         }
-
     }
 
     public String addCoffee(double amountOfCoffee, Coffee coffee) {
@@ -37,7 +33,6 @@ public class Coffeemachine {
         } else {
             return "Емкость для кофе заполнена";
         }
-
     }
 
     public String makeCoffee(double coffeeStrength, int cup) {
@@ -48,9 +43,8 @@ public class Coffeemachine {
             return "Досыпьте кофе";
         } else currentAmountOfWater -= cup;
         currentAmountOfCoffee -= CONSUMPTION_STRONG_COFFEE * coffeeStrength;
-        return "Готовлю " + coffee.getName() + " объемом " + cup + " крепость " + coffeeStrength;
+        return "Готовлю " + coffee.getCoffeeDescription() + " объемом " + cup + " крепость " + coffeeStrength;
     }
-
 }
 
 
